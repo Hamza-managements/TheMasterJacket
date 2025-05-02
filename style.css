@@ -1,42 +1,26 @@
-/* body {
-    padding-top: 20px;
-} */
+body {
+  overflow-x: hidden;
+}
 
-.headerimg{
-    width: 160px;
-    object-fit: contain;
-  
+.navbar-brand img {
+  height: 50px;
+}
+
+/* Optional: Dropdown on hover for desktop only */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
   }
-
-.hover:hover{
-    color: whitesmoke !important;
 }
 
-.star-rating {
-  color: #e0a800;
+img {
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.02);
 }
 
-.discount{
-  color: red;
-  font-style: inherit;
-}
-.banner {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8f9fa;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.banner-content {
-  padding: 2rem;
-}
 .carousel-item > .row {
   display: flex;
   flex-wrap: nowrap;
@@ -58,22 +42,6 @@
   padding: 0 5px;
 }
 
-.transform-example {
-  transition: transform 0.5s ease; /* Apply a smooth transition */
-}
-
-.transform-example:hover {
-  transform: scale(1.1); /* Scale up the element */
-}
-
-@media (min-width: 992px) {
-  .navbar .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  }
-}
-
-
 
 @media only screen and (max-width: 600px) {
 .headerimg{
@@ -81,5 +49,10 @@
   object-fit: contain;
 }
 
+.ban{
+  width: 100%;
+  height: 50vh;
+  object-fit: contain;
+}
 
   }
