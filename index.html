@@ -16,67 +16,52 @@
 <body>
    
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="https://the-master-jackets.vercel.app">
-                <img src="https://images-beta.tossdown.com/site/65b73fb7-2706-4440-87b9-9555fcd0ba80.webp" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="https://the-master-jackets.vercel.app">Home</a>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Men
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Black Leather Jacket</a></li>
-                            <li><a class="dropdown-item" href="#">Biker Leather Jacket</a></li>
-                            <li><a class="dropdown-item" href="#">Brown Leather Jacket</a></li>
-                        </ul>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Women
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Black Leather Jacket</a></li>
-                            <li><a class="dropdown-item" href="#">Biker Leather Jacket</a></li>
-                            <li><a class="dropdown-item" href="#">Brown Leather Jacket</a></li>
-                        </ul>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a class="nav-link" href="./second.html">Template 2</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-<br><br><br>
+  <div class="header-container">
+      <div class="announcement-bar">
+          Summer Sale! Up to 50% off <a href="#">Shop Now</a>
+      </div>
+      
+      <div class="main-header">
+          <button class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+          </button>
+          
+          <a href="#" class="logo custom-font ">TMJ</a>
+          
+          <nav class="nav-links">
+              <a href="#">Women</a>
+              <a href="#">Men</a>
+              <a href="#">Kids</a>
+              <a href="#">Accessories</a>
+              <a href="#">Sale</a>
+          </nav>
+          
+          <div class="header-actions">
+              <div class="search-bar">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Search...">
+              </div>
+              <a href="#"><i class="far fa-user"></i></a>
+              <a href="#"><i class="far fa-heart"></i></a>
+              <a href="#">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span class="cart-count">3</span>
+              </a>
+          </div>
+      </div>
+</div>
 
 <!-- Hero Section -->
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="./banner.jpg" class="d-block w-100 img-fluid" style="height: 70vh; object-fit: cover;" alt="Slide 1">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="./images/banner.jpg" class="d-block w-100 img-fluid" style="height: 80vh; object-fit: cover;" alt="Slide 1">
       </div>
       <div class="carousel-item" data-bs-interval="5000">
-        <img src="./banner.jpg" class="d-block w-100 img-fluid" style="height: 70vh; object-fit: cover;" alt="Slide 2">
+        <img src="./images/Christmas jacket banner .jpg" class="d-block w-100 img-fluid" style="height: 80vh; object-fit: cover;" alt="Slide 2">
       </div>
       <div class="carousel-item" data-bs-interval="5000">
-        <img src="./banner.jpg" class="d-block w-100 img-fluid" style="height: 70vh; object-fit: cover;" alt="Slide 3">
+        <img src="./images/web page.jpg" class="d-block w-100 img-fluid" style="height: 80vh; object-fit: cover;" alt="Slide 3">
       </div>
     </div>
   
@@ -107,7 +92,7 @@
 
 
 
-<!-- Best seller Products --><h2 class="text-center my-5">Best Sellers</h2>
+<!-- Best seller Products --><h2 class="text-center my-5 custom-font">Best Sellers</h2>
 <div class="container">
     <div class="row g-4">
         <!-- Card Start -->
@@ -152,7 +137,7 @@
 
 <!-- Reviews  -->
 <div class="container py-5">
-    <h2 class="text-center mb-4">Customer Reviews</h2>
+    <h2 class="text-center mb-4 custom-font">Customer Reviews</h2>
     <div class="row g-4">
       
       <!-- Review 1 -->
@@ -194,7 +179,7 @@
           
 
 <!-- NEW Arrivals -->
-<h2 class="text-center" >New Arrivals</h2>
+<h2 class="text-center custom-font" >New Arrivals</h2>
 <div class="container bg-light py-4">
   <div class="row g-4">
     <!-- Card -->
