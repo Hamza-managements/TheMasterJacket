@@ -17,71 +17,80 @@
    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="./index.html"><img class='headerimg'
-                src="https://images-beta.tossdown.com/site/65b73fb7-2706-4440-87b9-9555fcd0ba80.webp" alt=""></a>
-                <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://the-master-jackets.vercel.app">
+                <img src="https://images-beta.tossdown.com/site/65b73fb7-2706-4440-87b9-9555fcd0ba80.webp" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="./custom.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" target="_blank" href="./custom.html" role="button" data-bs-toggle="dropdown">Men</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Black leather jacket</a></li>
-                      <li><a class="dropdown-item" href="#">Biker leather jacket</a></li>
-                      <li><a class="dropdown-item" href="#">Brown leather jacket</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./custom.html" role="button" data-bs-toggle="dropdown">Women</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Women Black leather jacket</a></li>
-                      <li><a class="dropdown-item" href="#">Women Biker leather jacket</a></li>
-                      <li><a class="dropdown-item" href="#">Women Brown leather jacket</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./second.html">template 2</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://the-master-jackets.vercel.app">Home</a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Men
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Black Leather Jacket</a></li>
+                            <li><a class="dropdown-item" href="#">Biker Leather Jacket</a></li>
+                            <li><a class="dropdown-item" href="#">Brown Leather Jacket</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Women
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Black Leather Jacket</a></li>
+                            <li><a class="dropdown-item" href="#">Biker Leather Jacket</a></li>
+                            <li><a class="dropdown-item" href="#">Brown Leather Jacket</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./second.html">Template 2</a>
+                    </li>
                 </ul>
-              </div>
+            </div>
         </div>
     </nav>
 
 <br><br><br>
-    <!-- Hero Section -->
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="./banner.jpg"
-                    class="d-block w-100" style="height: 70vh; object-fit: cover;" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="./banner.jpg"
-                    class="d-block w-100" style="height: 70vh; object-fit: cover;" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="./banner.jpg"
-                    class="d-block w-100" style="height: 70vh; object-fit: cover;" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+
+<!-- Hero Section -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="./banner.jpg" class="d-block w-100 img-fluid" style="height: 70vh; object-fit: cover;" alt="Slide 1">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="./banner.jpg" class="d-block w-100 img-fluid" style="height: 70vh; object-fit: cover;" alt="Slide 2">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="./banner.jpg" class="d-block w-100 img-fluid" style="height: 70vh; object-fit: cover;" alt="Slide 3">
+      </div>
     </div>
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+  
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
 
     <!-- About Section -->
     <!-- <section class="container py-5">
@@ -98,61 +107,29 @@
 
 
 
-<!-- Best seller Products -->
-<h2 class="text-center" >Best Sellers</h2>
-<div class="d-flex justify-content-around align-items-center bg-light p-4 row">
-    <div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
+<!-- Best seller Products --><h2 class="text-center my-5">Best Sellers</h2>
+<div class="container">
+    <div class="row g-4">
+        <!-- Card Start -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+                <a href="https://the-master-jackets.vercel.app/">
+                    <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp"
+                        class="card-img-top img-fluid" alt="...">
+                </a>
+                <div class="card-body">
+                    <h6 class="card-title">Men's Black Harrington</h6>
+                    <p class="card-text fs-5">
+                        <span class="fs-6 text-decoration-line-through text-muted">$249.00</span>
+                        $189.00 <span class="text-warning">★★★★</span>
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div>
-    <div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
+        <!-- Repeat above card as needed -->
     </div>
 </div>
+  
 
 
 <!-- Double Banner Section -->
@@ -174,128 +151,124 @@
  
 
 <!-- Reviews  -->
-<div class="container my-5">
-    <h2 class="text-center mb-4">What Our Customers Say</h2>
+<div class="container py-5">
+    <h2 class="text-center mb-4">Customer Reviews</h2>
     <div class="row g-4">
-
-        <!-- Review 1 -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Jane Doe</h5>
-                    <p class="star-rating mb-2">★★★★★</p>
-                    <p class="card-text">Amazing service and fast delivery. Highly recommend!</p>
-                </div>
-            </div>
+      
+      <!-- Review 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Jane Doe</h5>
+            <p class="star-rating mb-2">★★★★★</p>
+            <p class="card-text">Amazing jacket! The fit and finish are perfect.</p>
+          </div>
         </div>
-
-        <!-- Review 2 -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">John Smith</h5>
-                    <p class="star-rating mb-2">★★★★☆</p>
-                    <p class="card-text">Great quality products. Will definitely shop again!</p>
-                </div>
-            </div>
+      </div>
+  
+      <!-- Review 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">John Smith</h5>
+            <p class="star-rating mb-2">★★★★☆</p>
+            <p class="card-text">Great quality products. Will definitely shop again!</p>
+          </div>
         </div>
-
-        <!-- Review 3 -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Emily White</h5>
-                    <p class="star-rating mb-2">★★★★★</p>
-                    <p class="card-text">Customer support was friendly and helpful. Loved the experience.</p>
-                </div>
-            </div>
+      </div>
+  
+      <!-- Review 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Emily White</h5>
+            <p class="star-rating mb-2">★★★★★</p>
+            <p class="card-text">Customer support was friendly and helpful. Loved the experience.</p>
+          </div>
         </div>
-
+      </div>
+  
     </div>
-</div>
+  </div>
+  
+          
 
 <!-- NEW Arrivals -->
 <h2 class="text-center" >New Arrivals</h2>
-<div class="d-flex justify-content-around align-items-center bg-light p-4 row">
-    <div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
+<div class="container bg-light py-4">
+  <div class="row g-4">
+    <!-- Card -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100">
+        <a href="https://the-master-jackets.vercel.app/">
+          <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp"
+               class="card-img-top img-fluid" alt="...">
+        </a>
         <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
+          <h6 class="card-title">Men's Black Harrington</h6>
+          <p class="card-text fs-5">
+            <span class="fs-6 text-muted text-decoration-line-through">$249.00</span>
+            $189.00 <span class="star-rating">★★★★</span>
+          </p>
         </div>
+      </div>
     </div>
-    <div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div>
-    <div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div><div class="card col-12 col-sm-6 col-md-4 col-lg-3" style="width: 18rem;"> <a href="https://the-master-jackets.vercel.app/">
-        <img src="https://www.angeljackets.com/product_images/q/353/reeves_black_leather_jacket__11910_zoom.webp" class="card-img-top transform-example" alt="..."></a>
-        <div class="card-body">
-            <h6 class="card-title">Men's Black Harrington </h6>
-            <p class="card-text fs-5"><span class="fs-6 discount" >$249.00</span> $189.00 <span class="star-rating">★★★★</span></p>
-        </div>
-    </div>
+    <!-- Repeat the card block for each product -->
+    <!-- ... -->
+  </div>
 </div>
 
+
 <!-- Customer Gallery -->
-  <div class="container mt-5 pt-5">
-    <div id="multiImageCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="container mt-5 pt-5">
+    <div id="multiImageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner">
   
         <!-- Slide 1 -->
         <div class="carousel-item active">
-          <div class="row">
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100" alt="1"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100" alt="2"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100" alt="3"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100" alt="4"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/114_Mens-moto-leather-jacket.webp" class="d-block w-100" alt="5"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/114_Mens-moto-leather-jacket.webp" class="d-block w-100" alt="6"></div>
+          <div class="row g-2">
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100 img-fluid" alt="1">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100 img-fluid" alt="2">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100 img-fluid" alt="3">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/112_womens-black-moto-leather-jacket.webp" class="d-block w-100 img-fluid" alt="4">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/114_Mens-moto-leather-jacket.webp" class="d-block w-100 img-fluid" alt="5">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/114_Mens-moto-leather-jacket.webp" class="d-block w-100 img-fluid" alt="6">
+            </div>
           </div>
         </div>
   
         <!-- Slide 2 -->
         <div class="carousel-item">
-          <div class="row">
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100" alt="7"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100" alt="8"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100" alt="9"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100" alt="10"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/105_womens-pink-leather-jacket.webp" class="d-block w-100" alt="11"></div>
-            <div class="col"><img src="https://www.angeljackets.com/images/customer_gallery/dynamic/105_womens-pink-leather-jacket.webp" class="d-block w-100" alt="12"></div>
+          <div class="row g-2">
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100 img-fluid" alt="7">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100 img-fluid" alt="8">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100 img-fluid" alt="9">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/121_131212_IMG_1542.jpeg" class="d-block w-100 img-fluid" alt="10">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/105_womens-pink-leather-jacket.webp" class="d-block w-100 img-fluid" alt="11">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <img src="https://www.angeljackets.com/images/customer_gallery/dynamic/105_womens-pink-leather-jacket.webp" class="d-block w-100 img-fluid" alt="12">
+            </div>
           </div>
         </div>
   
@@ -313,82 +286,75 @@
     </div>
   </div>
   
+  
 <br>
  <!-- footer////////////// text-light data-bs-theme="dark" -->
-  <footer class="bg-body-tertiary text-center text-light bg-dark" data-bs-theme="dark" >
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
-            <section class="mb-2">
-                <!-- Facebook -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998;"
-                    href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+ <footer class="bg-body-tertiary text-center text-light bg-dark" data-bs-theme="dark">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-2">
+            <!-- Facebook -->
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/yourpage" role="button">
+                <i class="fab fa-facebook-f"></i>
+            </a>
 
-                <!-- Twitter -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;"
-                    href="#!" role="button"><i class="fab fa-twitter"></i></a>
+            <!-- Twitter -->
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="https://twitter.com/yourhandle" role="button">
+                <i class="fab fa-twitter"></i>
+            </a>
 
-                <!-- Instagram -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;"
-                    href="https://www.instagram.com/shawarmaexpress9/" role="button"><i
-                        class="fab fa-instagram"></i></a>
-
-
-            </section>
-            <!-- Section: Social media -->
-        </div>
-
-
-        <!-- Grid container -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-4 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>The Master Jackets
-                        </h6>
-                        <img width="120px" class="mb-2"
-                            src="https://images-beta.tossdown.com/site/65b73fb7-2706-4440-87b9-9555fcd0ba80.webp"
-                            alt="">
-                        <p>
-                            Luxurious yet sustainable leather jackets, where softness, durability, and affordable elegance elevate every moment.
-                        </p>
-
-
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-4 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="fas fa-home me-3"></i>Office # 48, Idrees chambers, talpur road, I.I chundigarh road, Karachi, Sindh, Pakistan</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@themasterjackets.com
-                        </p>
-                        <div class="row">
-                            <p class="col-6"><i class="fas fa-phone me-3"></i> +92 312 2907426</p>
-                            <p class="col-6"><i class="fas fa-print me-3"></i> +92 324 2935517</p>
-                        </div>
-                    </div>
-
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
+            <!-- Instagram -->
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/shawarmaexpress9/" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
         </section>
+        <!-- Section: Social media -->
+    </div>
 
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2025 Copyright:
-            <a class="text-body" href="#intro-example">Romaan the HANUMAN.com</a>
+    <!-- Grid container -->
+    <section>
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-4 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>The Master Jackets
+                    </h6>
+                    <img width="120px" class="mb-2 img-fluid" src="https://images-beta.tossdown.com/site/65b73fb7-2706-4440-87b9-9555fcd0ba80.webp" alt="">
+                    <p>
+                        Luxurious yet sustainable leather jackets, where softness, durability, and affordable elegance elevate every moment.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i>Office # 48, Idrees chambers, talpur road, I.I chundigarh road, Karachi, Sindh, Pakistan</p>
+                    <p><i class="fas fa-envelope me-3"></i>info@themasterjackets.com</p>
+                    <div class="row">
+                        <p class="col-6"><i class="fas fa-phone me-3"></i> +92 312 2907426</p>
+                        <p class="col-6"><i class="fas fa-print me-3"></i> +92 324 2935517</p>
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
         </div>
-        <!-- Copyright -->
-  </footer>
+    </section>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2025 Copyright:
+        <a class="text-body" href="#intro-example">Romaan the HANUMAN.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
 
     <!-- Bootstrap 5 JS & Popper.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
