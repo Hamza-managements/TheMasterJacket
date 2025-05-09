@@ -1,0 +1,114 @@
+:root {
+    --dark-brown: #3E2C1C;
+    --tan: #A06D33;
+    --gold: #D6AD60;
+    --beige: #F8F5F2;
+    --black: #1A1A1A;
+    }
+    @font-face {
+        font-family: 'Nickson';
+        src: url('../fonts/nickson.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 16px;
+    background-color: var(--beige);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    }    
+    h1, h2, h3, h4, a{
+    font-family: 'Nickson', serif;
+    font-weight: bold;
+    }
+    a {
+        color: var(--tan);
+        text-decoration: none;
+    }
+    a:hover {
+        color: var(--gold);
+        text-decoration: underline;
+    }
+    
+    .btn-primary {
+        background-color: var(--dark-brown);
+        color: var(--beige);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    
+    .btn-primary:hover {
+        background-color: var(--tan);
+        color: var(--black);
+    }
+
+    .men-banner {
+        background: url('../images/men-leather-jackets.jpg') no-repeat center center/cover;
+        background-attachment: fixed;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 5rem 2rem;
+        min-height: 60vh;
+    }
+    
+    .men-header-content {
+        max-width: 800px;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+    
+    .men-header-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .men-header-content p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .men-banner {
+            height: auto;
+            padding: 4rem 2rem;
+            min-height: auto;
+        }
+    
+        .men-header-content h1 {
+            font-size: 2rem;
+        }
+    
+        .men-header-content p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .men-header-content h1 {
+            font-size: 2rem;
+        }
+    
+        .men-header-content p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    
+        .men-header-content {
+            padding: 1rem;
+        }
+    
+        .men-banner {
+            padding: 3rem 1rem;
+        }
+    }
+    
+    

@@ -1,0 +1,232 @@
+/* Blog gallery section */
+:root {
+    --primary-color: #D6AD60; /* gold */
+    --secondary-color: #A06D33; /* tan */
+    --light-color: #F8F5F2; /* beige */
+    --dark-color: #3E2C1C; /* dark brown */
+    --text-dark: #1A1A1A; /* black */
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-gallery-section {
+    padding: 5rem 0;
+    background-color: var(--light-color); /* beige */
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-gallery-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.blog-gallery-title h2 {
+    font-weight: 700;
+    color: var(--dark-color); /* dark brown */
+    margin-bottom: 1rem;
+}
+
+.blog-gallery-title p {
+    color: var(--text-dark); /* black with slight transparency */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.blog-gallery-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.blog-gallery-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.blog-gallery-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.blog-gallery-item {
+    flex: 0 0 33.33%;  /* One item per view */
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.blog-gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.blog-gallery-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-gallery-item:hover .blog-gallery-img img {
+    transform: scale(1.05);
+}
+
+.blog-gallery-content {
+    padding: 20px;
+}
+
+.blog-gallery-content h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-color); /* dark brown */
+}
+
+.blog-gallery-content p {
+    color: var(--text-dark); /* black */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.blog-gallery-customer-info {
+    display: flex;
+    align-items: center;
+}
+
+.blog-gallery-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.blog-gallery-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-gallery-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--dark-color); /* dark brown */
+}
+
+.blog-gallery-title {
+    font-size: 0.8rem;
+    color: var(--text-dark); /* black */
+}
+
+.blog-gallery-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.blog-gallery-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.blog-gallery-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.blog-gallery-dot.active {
+    background: var(--primary-color); /* gold */
+    transform: scale(1.2);
+}
+
+.blog-gallery-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.blog-gallery-arrow {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    font-size: 24px;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.blog-gallery-arrow:hover {
+    background: var(--primary-color); /* gold */
+    color: white;
+}
+
+.blog-gallery-arrow.prev {
+    left: -20px;
+}
+
+.blog-gallery-arrow.next {
+    right: -20px;
+}
+
+@media (max-width: 768px) {
+    .blog-gallery-item {
+        min-width: 250px;
+    }
+
+    .blog-gallery-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .blog-gallery-arrow.prev {
+        left: -10px;
+    }
+
+    .blog-gallery-arrow.next {
+        right: -10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-gallery-section {
+        padding: 3rem 0;
+    }
+
+    .blog-gallery-item {
+        min-width: 220px;
+        margin: 0 10px;
+    }
+
+    .blog-gallery-title h2 {
+        font-size: 1.5rem;
+    }
+}
