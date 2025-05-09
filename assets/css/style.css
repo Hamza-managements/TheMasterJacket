@@ -737,17 +737,6 @@ margin-bottom: 1rem;
     color: white;
 }
 
-.rj-btn-dark {
-    background-color: var(--bj-secondary);
-    color: white;
-    border: 2px solid var(--bj-dark);
-}
-
-.rj-btn-dark:hover {
-    background-color: var(--bj-border);
-    color: var(--bj-dark);
-}
-
 .rj-hero-pattern {
     position: absolute;
     width: 100%;
