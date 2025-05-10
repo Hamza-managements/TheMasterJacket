@@ -60,7 +60,7 @@
     }
 
     .men-banner {
-        background: url('../images/men-leather-jackets.jpg') no-repeat center top/contain;
+        background: url('../images/men-leather-jackets.jpg') no-repeat;
         background-attachment: fixed;
         color: white;
         display: flex;
@@ -69,6 +69,9 @@
         text-align: center;
         padding: 5rem 2rem;
         min-height: 60vh;
+    }
+    .women{
+        background: url("../images/women.jpg");
     }
     
     .men-header-content {
@@ -93,6 +96,7 @@
             height: auto;
             padding: 4rem 2rem;
             min-height: auto;
+            background-position: center;
         }
     
         .men-header-content h1 {
