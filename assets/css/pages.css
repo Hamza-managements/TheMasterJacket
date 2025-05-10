@@ -26,11 +26,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    }    
-    h1, h2, h3, h4, a{
-    font-family: 'Nickson', serif;
-    font-weight: bold;
-    }
+     }
     hr.custom-hr {
         border: none;
         height: 2px;
