@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/content.css">
     <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
     <!-- Header-->
-<div class="fs-header-container">
+<header class="fs-header-container">
         <div class="fs-header-content">
-            <div class="fs-announcement-bar"  data-aos="fade-down" data-aos-duration="500">
+            <div class="fs-announcement-bar" data-aos="fade-down" data-aos-duration="500">
                 Summer Sale! Up to 50% off <a href="#">Shop Now</a>
             </div>
             
@@ -30,7 +31,7 @@
                 <nav class="fs-nav-container">
                     <div class="fs-nav-links">
                         <div class="fs-nav-item">
-                            <a href="./women.html" class="fs-main-link">Women <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                            <a href="#" class="fs-main-link">Women <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
                             <div class="fs-dropdown-menu">
                                 <div class="fs-dropdown-title">Categories</div>
                                 <a href="#">Dresses</a>
@@ -142,8 +143,18 @@
                     </div>
   
                     <div class="fs-nav-item">
-                        <a href="./contact-us.html" class="fs-main-link">Contact Us</a>
-                    </div>
+                            <a href="./about.html" class="fs-main-link">Brand<i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                            <div class="fs-dropdown-menu">
+                                <a href="./about.html">About us</a>
+                                <a href="./contact-us.html">Contact us</a>
+                                <a href="./return&exchanges.html">Return & Exchanges</a>
+                            </div>
+                            <div class="fs-mobile-submenu">
+                                <a href="./about.html">About us</a>
+                               <a href="./contact-us.html">Contact us</a>
+                               <a href="./return&exchanges.html">Return & Exchanges</a>
+                            </div>
+                        </div>
                 </div>
             </nav>
   
@@ -161,7 +172,7 @@
             </div>
         </div>
     </div>
-</div>
+</header>
       
 <!-- Hero Section -->
 <section class="hero">
@@ -381,7 +392,7 @@
   </section>
 
 <!-- Customer Gallery -->
-<section class="image-gallery">
+<!-- <section class="image-gallery">
     <div class="section-title">
         <h2>Customer Gallery</h2>
         <p>See how our customers are using our products in their daily lives</p>
@@ -438,7 +449,7 @@
         <div class="nav-dot"></div>
         <div class="nav-dot"></div>
     </div>
-</section>
+</section> -->
 
 <!-- Blog Section -->
 <section class="blog-gallery-section" data-aos="fade-in" data-aos-duration="500">
@@ -575,7 +586,7 @@
 </section>
 
 <!-- footer-->
-<footer class="luxury-footer" data-aos="fade-up" data-aos-delay="100">
+<footer class="luxury-footer">
         <div class="container">
             <div class="row footer-links-row">
                 <div class="col-lg-3 col-md-6 footer-col">
@@ -653,165 +664,115 @@
 </footer>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // =============================
-        // Footer Toggle (Mobile)
-        // =============================
-        const footerHeadings = document.querySelectorAll('.footer-heading');
-        const footerContainers = document.querySelectorAll('.footer-links-container');
-        let isMobile = window.innerWidth < 992;
-    
-        function bindFooterToggle() {
-            footerHeadings.forEach(heading => {
-                heading.addEventListener('click', heading._clickHandler = function () {
-                    const container = this.nextElementSibling;
-                    container.classList.toggle('active');
-                    footerHeadings.forEach(other => {
-                        if (other !== heading) {
-                            other.nextElementSibling.classList.remove('active');
-                        }
-                    });
-                });
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    // =============================
+    // Custom Horizontal Auto Slider
+    // =============================
+    const customTrack = document.querySelector('.carousel-track');
+    const customItems = document.querySelectorAll('.carousel-item-custom');
+    const customPrev = document.querySelector('.custom-prev');
+    const customNext = document.querySelector('.custom-next');
+
+    if (customTrack && customItems.length > 0) {
+        let customIndex = 0;
+
+        function getCustomItemWidth() {
+            return customItems[0].offsetWidth + 20; // include spacing if needed
         }
-    
-        function unbindFooterToggle() {
-            footerHeadings.forEach(heading => {
-                if (heading._clickHandler) {
-                    heading.removeEventListener('click', heading._clickHandler);
-                    delete heading._clickHandler;
-                }
-            });
+
+        function updateCustomSlider() {
+            const offset = customIndex * getCustomItemWidth();
+            customTrack.style.transform = `translateX(-${offset}px)`;
         }
-    
-        function updateFooterLayout() {
-            const isNowMobile = window.innerWidth < 992;
-            if (isNowMobile !== isMobile) {
-                isMobile = isNowMobile;
-                if (isMobile) {
-                    footerContainers.forEach(c => c.classList.remove('active'));
-                    bindFooterToggle();
-                } else {
-                    footerContainers.forEach(c => c.classList.add('active'));
-                    unbindFooterToggle();
-                }
-            }
-        }
-    
-        if (isMobile) bindFooterToggle();
-        else footerContainers.forEach(c => c.classList.add('active'));
-    
-        window.addEventListener('resize', updateFooterLayout);
-    
-        // =============================
-        // Custom Horizontal Slider (Auto Slide)
-        // =============================
-        const customTrack = document.querySelector('.carousel-track');
-        const customItems = document.querySelectorAll('.carousel-item-custom');
-        const customPrev = document.querySelector('.custom-prev');
-        const customNext = document.querySelector('.custom-next');
-    
-        if (customTrack && customItems.length > 0) {
-            let customIndex = 0;
-    
-            function getCustomItemWidth() {
-                return customItems[0].offsetWidth + 20;
-            }
-    
-            function updateCustomSlider() {
-                const offset = customIndex * getCustomItemWidth();
-                customTrack.style.transform = `translateX(-${offset}px)`;
-            }
-    
-            function autoSlideCustom() {
-                customIndex = (customIndex < customItems.length - 1) ? customIndex + 1 : 0;
-                updateCustomSlider();
-            }
-    
-            customNext.addEventListener('click', () => {
-                customIndex = (customIndex < customItems.length - 1) ? customIndex + 1 : 0;
-                updateCustomSlider();
-            });
-    
-            customPrev.addEventListener('click', () => {
-                customIndex = (customIndex > 0) ? customIndex - 1 : customItems.length - 1;
-                updateCustomSlider();
-            });
-    
-            let autoSlideInterval = setInterval(autoSlideCustom, 2000);
-            customTrack.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-            customTrack.parentElement.addEventListener('mouseleave', () => {
-                autoSlideInterval = setInterval(autoSlideCustom, 2000);
-            });
-    
-            window.addEventListener('resize', updateCustomSlider);
+
+        function autoSlideCustom() {
+            customIndex = (customIndex + 1) % customItems.length;
             updateCustomSlider();
         }
-    
-        // =============================
-        // Blog Gallery Slider
-        // =============================
+
+        if (customNext && customPrev) {
+            customNext.addEventListener('click', () => {
+                customIndex = (customIndex + 1) % customItems.length;
+                updateCustomSlider();
+            });
+
+            customPrev.addEventListener('click', () => {
+                customIndex = (customIndex - 1 + customItems.length) % customItems.length;
+                updateCustomSlider();
+            });
+        }
+
+        let autoSlideInterval = setInterval(autoSlideCustom, 2000);
+
+        customTrack.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        customTrack.parentElement.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(autoSlideCustom, 2000);
+        });
+
+        window.addEventListener('resize', updateCustomSlider);
+        updateCustomSlider();
+    }
+
+    // =============================
+    // Blog Gallery Slider
+    // =============================
     const blogTrack = document.querySelector('.blog-gallery-track');
     const blogItems = document.querySelectorAll('.blog-gallery-item');
     const blogDots = document.querySelectorAll('.blog-gallery-dot');
     const blogPrev = document.querySelector('.blog-gallery-arrow.prev');
     const blogNext = document.querySelector('.blog-gallery-arrow.next');
 
-    if (!blogTrack || blogItems.length === 0) return;
+    if (blogTrack && blogItems.length > 0) {
+        let currentSlide = 0;
 
-    let currentSlide = 0;
+        function updateBlogSlider() {
+            const itemWidth = blogItems[0].offsetWidth;
+            blogTrack.style.transform = `translateX(-${currentSlide * itemWidth}px)`;
 
-    // Function to update the slider
-    function updateBlogSlider() {
-        const itemWidth = blogItems[0].offsetWidth;  // Get width of each item
-        blogTrack.style.transform = `translateX(-${currentSlide * itemWidth}px)`;  // Move the track
+            blogDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
 
-        // Update dots
+            if (blogPrev && blogNext) {
+                blogPrev.disabled = currentSlide === 0;
+                blogNext.disabled = currentSlide === blogItems.length - 1;
+            }
+        }
+
+        if (blogNext && blogPrev) {
+            blogNext.addEventListener('click', () => {
+                if (currentSlide < blogItems.length - 1) {
+                    currentSlide++;
+                    updateBlogSlider();
+                }
+            });
+
+            blogPrev.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateBlogSlider();
+                }
+            });
+        }
+
         blogDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateBlogSlider();
+            });
         });
 
-        // Disable prev/next buttons if at first or last slide
-        blogPrev.disabled = currentSlide === 0;
-        blogNext.disabled = currentSlide === blogItems.length - 1;
+        window.addEventListener('resize', updateBlogSlider);
+        updateBlogSlider();
     }
-
-    // Next slide on "Next" button click
-    blogNext.addEventListener('click', () => {
-        if (currentSlide < blogItems.length - 1) {
-            currentSlide++;
-            updateBlogSlider();
-        }
-    });
-
-    // Previous slide on "Prev" button click
-    blogPrev.addEventListener('click', () => {
-        if (currentSlide > 0) {
-            currentSlide--;
-            updateBlogSlider();
-        }
-    });
-
-    // Dot click handler
-    blogDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentSlide = index;
-            updateBlogSlider();
-        });
-    });
-
-    // Handle resizing
-    window.addEventListener('resize', updateBlogSlider);
-    
-    // Initialize the slider
-    updateBlogSlider();
-    });
+});
 </script>
+
     
     
+<script src="assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="assets/js/script.js"></script>
 <script>
         AOS.init();
 </script>

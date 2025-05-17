@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Your Brand</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* === Color Palette & Base Styles === */
+        :root {
+            --dark-brown: #3E2C1C;
+            --tan: #A06D33;
+            --gold: #D6AD60;
+            --beige: #F8F5F2;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        body {
+            background-color: var(--beige);
+            color: var(--dark-brown);
+            line-height: 1.7;
+        }
+        
+        /* === Typography === */
+        h1, h2, h3 {
+            font-weight: 600;
+            color: var(--dark-brown);
+        }
+        
+        h1 { font-size: clamp(2rem, 5vw, 3rem); }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+        h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+        
+        p {
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            color: var(--dark-brown);
+            opacity: 0.9;
+        }
+        
+        /* === Layout === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        /* === Header === */
+        .hero {
+            background: linear-gradient(rgba(62, 44, 28, 0.7), rgba(62, 44, 28, 0.7)), 
+                        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--beige);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h1 {
+            color: var(--beige);
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            color: var(--beige);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        /* === Mission Section === */
+        .mission {
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .mission h2 {
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .mission h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--tan);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* === Team Section === */
+        .team {
+            background-color: var(--beige);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .member-info p.position {
+            color: var(--tan);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        /* === Values Section === */
+        .values {
+            background-color: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 8px;
+            background: var(--beige);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--tan);
+            margin-bottom: 20px;
+        }
+        
+        /* === CTA Section === */
+        .cta {
+            background-color: var(--tan);
+            color: var(--beige);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta h2 {
+            color: var(--beige);
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--dark-brown);
+            color: var(--beige);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background: var(--beige);
+            color: var(--dark-brown);
+        }
+        
+        /* === Footer === */
+        footer {
+            background-color: var(--dark-brown);
+            color: var(--beige);
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* === Responsive Design === */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 0;
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+        }
+    
+        /* === Color Palette & Base Styles === */
+        :root {
+            --dark-brown: #3E2C1C;
+            --tan: #A06D33;
+            --gold: #D6AD60;
+            --beige: #F8F5F2;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        body {
+            background-color: var(--beige);
+            color: var(--dark-brown);
+            line-height: 1.7;
+        }
+        
+        /* === Banner Section === */
+        .banner-section {
+            padding: 60px 20px;
+        }
+        
+        .banner-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .banner-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Individual Banners */
+        .promo-banner {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .promo-banner:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Banner Backgrounds */
+        .banner-delivery {
+            background: linear-gradient(rgba(62, 44, 28, 0.85), rgba(62, 44, 28, 0.85)), 
+                       url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-craftsmanship {
+            background: linear-gradient(rgba(160, 109, 51, 0.85), rgba(160, 109, 51, 0.85)), 
+                       url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1351&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-sustainability {
+            background: linear-gradient(rgba(62, 44, 28, 0.8), rgba(62, 44, 28, 0.8)), 
+                       url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-community {
+            background: linear-gradient(rgba(160, 109, 51, 0.8), rgba(160, 109, 51, 0.8)), 
+                       url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Banner Content */
+        .banner-content {
+            padding: 40px;
+            color: var(--beige);
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        
+        .banner-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .banner-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .banner-text {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .banner-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: var(--gold);
+            color: var(--dark-brown);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .banner-btn:hover {
+            background: var(--beige);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .banner-content {
+                padding: 30px;
+            }
+            
+            .banner-title {
+                font-size: 1.5rem;
+            }
+            
+            .banner-icon {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+        }
+    
+        @font-face {
+        font-family: 'Nickson';
+        src: url('./assets/fonts/nickson.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+        :root {
+            --dark-brown: #3E2C1C;
+            --tan: #A06D33;
+            --gold: #D6AD60;
+            --beige: #F8F5F2;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nickson', serif;
+        }
+        
+        body {
+            background-color: var(--beige);
+            color: var(--dark-brown);
+            line-height: 1.7;
+        }
+        
+        /* === Typography === */
+        h1, h2, h3 {
+            font-weight: 600;
+            color: var(--dark-brown);
+        }
+        
+        h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+        
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            color: var(--dark-brown);
+            opacity: 0.9;
+        }
+        
+        /* === Layout === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        /* === Header === */
+        .hero {
+            background: linear-gradient(rgba(62, 44, 28, 0.7), rgba(62, 44, 28, 0.7)), 
+                        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--beige);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h1 {
+            color: var(--beige);
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            color: var(--beige);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        /* === Mission Section === */
+        .mission {
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .mission h2 {
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .mission h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--tan);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* === Team Section === */
+        .team {
+            background-color: var(--beige);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .member-info p.position {
+            color: var(--tan);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        /* === Values Section === */
+        .values {
+            background-color: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 8px;
+            background: var(--beige);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--tan);
+            margin-bottom: 20px;
+        }
+        
+        /* === CTA Section === */
+        .cta {
+            background-color: var(--tan);
+            color: var(--beige);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta h2 {
+            color: var(--beige);
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--dark-brown);
+            color: var(--beige);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            letter-spacing: 0.8px;
+        }
+        
+        .cta-btn:hover {
+            background: var(--beige);
+            color: var(--dark-brown);
+        }
+        
+        /* === Footer === */
+        footer {
+            background-color: var(--dark-brown);
+            color: var(--beige);
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* === Responsive Design === */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 0;
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero" data-aos="fade" data-aos-duration="1000">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-delay="200">Our Story</h1>
+            <p data-aos="fade-up" data-aos-delay="400">Founded in 2010, we've been crafting exceptional experiences with passion and dedication, rooted in our love for quality and tradition.</p>
+        </div>
+    </header>
+    
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2 data-aos="fade-up">Our Mission</h2>
+                <p data-aos="fade-up" data-aos-delay="200">At the heart of our company is a commitment to excellence. We blend traditional craftsmanship with modern innovation to create products that stand the test of time. Our mission is to deliver unparalleled quality while maintaining sustainable practices that honor both people and planet.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 data-aos="fade-up">Meet Our Team</h2>
+            <p data-aos="fade-up" data-aos-delay="100">The talented individuals behind our success</p>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member" >
+                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=634&q=80');"></div>
+                    <div class="member-info">
+                        <h3>Sarah Johnson</h3>
+                        <p class="position">Founder & CEO</p>
+                        <p>With 20 years in the industry, Sarah leads with vision and passion.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=634&q=80');"></div>
+                    <div class="member-info">
+                        <h3>Michael Chen</h3>
+                        <p class="position">Creative Director</p>
+                        <p>Michael brings innovative design solutions to every project.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=634&q=80');"></div>
+                    <div class="member-info">
+                        <h3>Elena Rodriguez</h3>
+                        <p class="position">Head of Operations</p>
+                        <p>Elena ensures everything runs smoothly behind the scenes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Core Values</h2>
+            <p data-aos="fade-up" data-aos-delay="100">The principles that guide everything we do</p>
+            
+            <div class="values-grid">
+                <!-- Value 1 -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>We never compromise on quality, using only the finest materials and craftsmanship.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Responsible sourcing and eco-friendly practices are at our core.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We support local artisans and give back to our communities.</p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We constantly evolve while respecting traditional techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta" data-aos="fade-up">
+        <div class="container">
+            <h2>Ready to Experience Our Craft?</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Discover our collection and join our story</p>
+            <a href="#" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Explore Our Products</a>
+        </div>
+    </section>
+
+    <div class="section-heading" data-aos="fade-up">
+        <h2>Why Choose Us</h2>
+        <p>Discover what sets us apart - from our commitment to quality craftsmanship to our dedication to sustainable practices and community engagement.</p>
+    </div>
+
+    <section class="banner-section">
+        <div class="banner-container">
+            <!-- Fast Delivery & Discounts Banner -->
+            <div class="promo-banner banner-delivery" data-aos="fade-right">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="banner-title">Fast Delivery & Exclusive Discounts</h3>
+                    <p class="banner-text">Enjoy free express shipping on all orders over $100 and seasonal discounts for our loyal customers.</p>
+                    <a href="#" class="banner-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <!-- Excellent Craftsmanship Banner -->
+            <div class="promo-banner banner-craftsmanship" data-aos="fade-left">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="banner-title">Excellent Craftsmanship</h3>
+                    <p class="banner-text">Each piece is handcrafted by skilled artisans using traditional techniques passed down through generations.</p>
+                    <a href="#" class="banner-btn">Our Process</a>
+                </div>
+            </div>
+            
+            <!-- Sustainability & Quality Banner -->
+            <div class="promo-banner banner-sustainability" data-aos="fade-right" data-aos-delay="100">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="banner-title">Sustainability & Quality</h3>
+                    <p class="banner-text">We source eco-friendly materials and implement sustainable practices without compromising on premium quality standards.</p>
+                    <a href="#" class="banner-btn">Our Materials</a>
+                </div>
+            </div>
+            
+            <!-- Community & Innovation Banner -->
+            <div class="promo-banner banner-community" data-aos="fade-left" data-aos-delay="100">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="banner-title">Community & Innovation</h3>
+                    <p class="banner-text">We collaborate with local communities while embracing innovative techniques to push boundaries in our craft.</p>
+                    <a href="#" class="banner-btn">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Brand Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: true, // Whether animation should happen only once
+            offset: 100, // Offset (in px) from the original trigger point
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us | Your Brand</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/css/header.css">
+   <style>
+        /* === Color Palette & Base Styles === */
+        :root {
+            --dark-brown: #3E2C1C;
+            --tan: #A06D33;
+            --gold: #D6AD60;
+            --beige: #F8F5F2;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--beige);
+            color: var(--dark-brown);
+            line-height: 1.7;
+        }
+        
+        /* === Typography === */
+        h1, h2, h3 {
+            font-weight: 600;
+            color: var(--dark-brown);
+        }
+        
+        h1 { font-size: clamp(2rem, 5vw, 3rem); }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+        h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+        
+        p {
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            color: var(--dark-brown);
+            opacity: 0.9;
+        }
+        
+        /* === Layout === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        /* === Header === */
+        .hero {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(rgba(62, 44, 28, 0.7), rgba(62, 44, 28, 0.7)), 
+                        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--beige);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h1 {
+            color: var(--beige);
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            color: var(--beige);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        /* === Mission Section === */
+        .mission {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mission-content-left{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .mission h2 {
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .mission h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--tan);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* === Team Section === */
+        .team {
+            background-color: var(--beige);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .member-info p.position {
+            color: var(--tan);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        /* === Values Section === */
+        .values {
+            background-color: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 8px;
+            background: var(--beige);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--tan);
+            margin-bottom: 20px;
+        }
+        
+        /* === CTA Section === */
+        .cta {
+            background-color: var(--tan);
+            color: var(--beige);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta h2 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--beige);
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--dark-brown);
+            color: var(--beige);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background: var(--beige);
+            color: var(--dark-brown);
+        }
+                
+        /* === Responsive Design === */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 0;
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+        }
+        .banner-section {
+            padding: 60px 20px;
+        }
+        
+        .banner-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .banner-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Individual Banners */
+        .section-heading {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-heading h2 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-heading h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--tan);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-heading p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            color: var(--dark-brown);
+            opacity: 0.9;
+        }
+        .promo-banner {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .promo-banner:hover {
+            transform: translateY(-5px);
+        }
+        
+        .banner-delivery {
+            background: linear-gradient(rgba(62, 44, 28, 0.60), rgba(62, 44, 28, 0.85)), 
+                       url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-craftsmanship {
+            background: linear-gradient(rgba(160, 109, 51, 0.6), rgba(160, 109, 51, 0.6)), 
+                       url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1351&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .banner-sustainability {
+            background: linear-gradient(rgba(175, 111, 55, 0.5), rgba(146, 87, 35, 0.4)), 
+                       url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-community {
+            background: linear-gradient(rgba(160, 109, 51, 0.6), rgba(214, 147, 70, 0.5)), 
+                       url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-content {
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .banner-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .banner-title {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--beige) !important;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .banner-text {
+            margin-bottom: 20px;
+            color: var(--beige) !important;
+            font-size: 1.1rem;
+        }
+        
+        .banner-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: var(--gold);
+            color: var(--dark-brown);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .banner-btn:hover {
+            background: var(--beige);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .section-heading {
+                padding: 40px 20px 30px;
+            }
+            .banner-content {
+                padding: 30px;
+            }
+            
+            .banner-title {
+                font-size: 1.5rem;
+            }
+            .banner-icon {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+        <link rel="stylesheet" href="assets/css/footer.css">
+
+</head>
+<body>
+    <header class="fs-header-container">
+        <div class="fs-header-content">
+            <div class="fs-announcement-bar" data-aos="fade-down" data-aos-duration="500">
+                Summer Sale! Up to 50% off <a href="#">Shop Now</a>
+            </div>
+            
+            <div class="fs-main-header">
+                <button class="fs-mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <a href="#" class="fs-logo">TMJ</a>
+                
+                <nav class="fs-nav-container">
+                    <div class="fs-nav-links">
+                        <div class="fs-nav-item">
+                            <a href="#" class="fs-main-link">Women <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                            <div class="fs-dropdown-menu">
+                                <div class="fs-dropdown-title">Categories</div>
+                                <a href="#">Dresses</a>
+                                <a href="#">Tops & Tees</a>
+                                <a href="#">Sweaters</a>
+                                <a href="#">Jeans</a>
+                                <a href="#">Jackets</a>
+                                <div class="fs-dropdown-divider"></div>
+                                <div class="fs-dropdown-title">Shop By</div>
+                                <a href="#">New Arrivals</a>
+                                <a href="#">Best Sellers</a>
+                                <a href="#">Sale</a>
+                            </div>
+                            <div class="fs-mobile-submenu">
+                                <div class="fs-dropdown-title">Categories</div>
+                                <a href="#">Dresses</a>
+                                <a href="#">Tops & Tees</a>
+                                <a href="#">Sweaters</a>
+                                <a href="#">Jeans</a>
+                                <a href="#">Jackets</a>
+                                <div class="fs-dropdown-divider"></div>
+                                <div class="fs-dropdown-title">Shop By</div>
+                                <a href="#">New Arrivals</a>
+                                <a href="#">Best Sellers</a>
+                                <a href="#">Sale</a>
+                            </div>
+                        </div>
+                        
+                        <div class="fs-nav-item">
+                            <a href="./men-leather-jackets.html" class="fs-main-link">Men <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                            <div class="fs-dropdown-menu">
+                                <div class="fs-dropdown-title">Categories</div>
+                                <a href="#">Shirts</a>
+                                <a href="#">T-Shirts</a>
+                                <a href="#">Jeans</a>
+                                <a href="#">Suits</a>
+                                <a href="#">Activewear</a>
+                            </div>
+                            <div class="fs-mobile-submenu">
+                                <div class="fs-dropdown-title">Categories</div>
+                                <a href="#">Shirts</a>
+                                <a href="#">T-Shirts</a>
+                                <a href="#">Jeans</a>
+                                <a href="#">Suits</a>
+                                <a href="#">Activewear</a>
+                            </div>
+                        </div>
+                        
+                        <div class="fs-nav-item">
+                            <a href="#" class="fs-main-link">Kids</a>
+                            <div class="fs-dropdown-menu">
+                              <a href="#">Boys</a>
+                              <a href="#">Girls</a>
+                              <a href="#">Baby</a>
+                              <a href="#">Shoes</a>
+                          </div>
+                          <div class="fs-mobile-submenu">
+                              <a href="#">Boys</a>
+                              <a href="#">Girls</a>
+                              <a href="#">Baby</a>
+                              <a href="#">Shoes</a>
+                          </div>
+                      </div>
+                        
+                      <div class="fs-nav-item">
+                        <a href="#" class="fs-main-link">Accessories <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                        <div class="fs-mega-menu fs-dropdown-menu">
+                            <div class="fs-mega-menu-column">
+                                <h4 class="fs-dropdown-title" >Bags & Purses</h4>
+                                <a href="#">Handbags</a>
+                                <a href="#">Backpacks</a>
+                                <a href="#">Wallets</a>
+                                <a href="#">Clutches</a>
+                            </div>
+                            <div class="fs-mega-menu-column">
+                                <h4 class="fs-dropdown-title">Jewelry</h4>
+                                <a href="#">Necklaces</a>
+                                <a href="#">Earrings</a>
+                                <a href="#">Bracelets</a>
+                                <a href="#">Watches</a>
+                            </div>
+                            <div class="fs-mega-menu-column">
+                                <h4 class="fs-dropdown-title">Sunglasses</h4>
+                                <a href="#">Aviator</a>
+                                <a href="#">Wayfarer</a>
+                                <a href="#">Round</a>
+                                <a href="#">Sports</a>
+                            </div>
+                        </div>
+                        <div class="fs-mobile-submenu">
+                            <div class="fs-dropdown-title">Bags & Purses</div>
+                            <a href="#">Handbags</a>
+                            <a href="#">Backpacks</a>
+                            <a href="#">Wallets</a>
+                            <a href="#">Clutches</a>
+  
+                            <div class="fs-dropdown-title">Jewelry</div>
+                            <a href="#">Necklaces</a>
+                            <a href="#">Earrings</a>
+                            <a href="#">Bracelets</a>
+                            <a href="#">Watches</a>
+  
+                            <div class="fs-dropdown-title">Sunglasses</div>
+                            <a href="#">Aviator</a>
+                            <a href="#">Wayfarer</a>
+                            <a href="#">Round</a>
+                            <a href="#">Sports</a>
+                        </div>
+                    </div>
+  
+                    <div class="fs-nav-item">
+                            <a href="./about.html" class="fs-main-link">Brand<i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                            <div class="fs-dropdown-menu">
+                                <a href="./about.html">About us</a>
+                                <a href="./contact-us.html">Contact us</a>
+                            </div>
+                            <div class="fs-mobile-submenu">
+                                <a href="./about.html">About us</a>
+                               <a href="./contact-us.html">Contact us</a>
+                            </div>
+                        </div>
+                </div>
+            </nav>
+  
+            <div class="fs-header-actions">
+                <div class="fs-search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <a href="#"><i class="far fa-user"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="fs-cart-count">3</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Founded in 2020, we've been crafting exceptional experiences with passion and dedication, rooted in our love for quality and tradition.</p>
+        </div>
+    </div>
+    
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p>Our mission is to redefine modern luxury through timeless design, ethical craftsmanship, and uncompromising quality. We are dedicated to creating pieces that not only elevate personal style but also reflect a deeper purpose—supporting sustainable practices, empowering skilled artisans, and honoring the heritage behind every material we use. We believe true luxury is built to last, made responsibly, and felt in every detail.</p>
+            </div>
+        </div>
+    </section>
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content-left">
+                <div style="text-align: left;">
+                <h2> Crafting a Legacy of Luxury.</h2>
+                <p>At the core of our brand is a relentless pursuit of excellence. We don’t just make products—we shape timeless expressions of style and identity. By fusing the soul of traditional craftsmanship with the precision of modern design, we create more than garments—we create stories.
+               Each piece is thoughtfully made, with every stitch telling a tale of dedication, detail, and distinction.
+               Feel the handmade luxury—in the richness of our textures, in the elegance of our forms, and in the care behind every creation.
+               We’re not just building a brand. We’re creating a legacy—responsibly, sustainably, and beautifully.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <p>The principles that guide everything we do</p>
+            
+            <div class="values-grid">
+                <!-- Value 1 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>We never compromise on quality, using only the finest materials and craftsmanship.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Responsible sourcing and eco-friendly practices are at our core.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We support local artisans and give back to our communities.</p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We constantly evolve while respecting traditional techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience Our Craft?</h2>
+            <p>Discover our collection and join our story</p>
+            <a href="#" class="cta-btn">Explore Our Products</a>
+        </div>
+    </section>
+    
+     <div class="section-heading" data-aos="fade-up">
+        <h2>Why Choose Us</h2>
+        <p>Discover what sets us apart - from our commitment to quality craftsmanship to our dedication to sustainable practices and community engagement.</p>
+    </div>
+    <!-- Double Banner Section -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <!-- Fast Delivery & Discounts Banner -->
+            <div class="promo-banner banner-delivery" data-aos="fade-right">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="banner-title" >Fast Delivery & Exclusive Discounts</h3>
+                    <p class="banner-text">Enjoy free express shipping on all orders over $100 and seasonal discounts for our loyal customers.</p>
+                    <a href="#" class="banner-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <!-- Excellent Craftsmanship Banner -->
+            <div class="promo-banner banner-craftsmanship" data-aos="fade-left">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="banner-title">Excellent Craftsmanship</h3>
+                    <p class="banner-text">Each piece is handcrafted by skilled artisans using traditional techniques passed down through generations.</p>
+                    <a href="#" class="banner-btn">Our Process</a>
+                </div>
+            </div>
+       <!-- Sustainability & Quality Banner -->
+            <div class="promo-banner banner-sustainability" data-aos="fade-right" data-aos-delay="100">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="banner-title">Sustainability & Quality</h3>
+                    <p class="banner-text">We source eco-friendly materials and implement sustainable practices without compromising on premium quality standards.</p>
+                    <a href="#" class="banner-btn">Our Materials</a>
+                </div>
+            </div>
+            
+            <!-- Community & Innovation Banner -->
+            <div class="promo-banner banner-community" data-aos="fade-left" data-aos-delay="100">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="banner-title">Community & Innovation</h3>
+                    <p class="banner-text">We collaborate with local communities while embracing innovative techniques to push boundaries in our craft.</p>
+                    <a href="#" class="banner-btn">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Footer -->
+<footer class="luxury-footer" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+            <div class="row footer-links-row">
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <SPAn ><B style="color: #D6AD60;">The Master Jackets</B></SPAn>
+                        <p style="color: #F8F5F2;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Premium quality products crafted with care for the discerning customer.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="footer-heading">Shop</h5>
+                    <div class="footer-links-container">
+                        <ul class="footer-links">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Sale Items</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Lookbook</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="footer-heading">Information</h5>
+                    <div class="footer-links-container">
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="footer-heading">Contact</h5>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Office # 48, Idrees Chambers, Talpur Road, I.I Chundrigarh Road, Karachi, Sindh, Pakistan</p>
+                        <p><i class="fas fa-phone"></i> (888) 555-1234</p>
+                        <p><i class="fas fa-envelope"></i> info@themasterjackets.com</p>
+                    </div>
+                    
+                    <h5 class="footer-heading mt-4">Newsletter</h5>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        &copy; 2025 <a href="#">The Master Jackets</a>. All rights reserved.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="payment-methods">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/stripe.svg" alt="Stripe" width="40" height="25">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/visa.svg" alt="Visa" width="40" height="25">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mastercard.svg" alt="Mastercard" width="40" height="25">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/paypal.svg" alt="PayPal" width="40" height="25">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applepay.svg" alt="Apple Pay" width="40" height="25">
+                    </div>
+                </div>
+            </div>
+        </div>
+</footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+</html>
